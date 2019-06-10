@@ -19,6 +19,7 @@
 
 console.log("Your JS is working");
 
+//API INFO
 const DOMAIN = 'https://api.edamam.com/search';
 const API_KEY = '65c4e536f249fd469543ef31130ef33d';
 const APP_ID = 'df52775d'
@@ -26,6 +27,7 @@ const RECIPE = 'recipe'
 const BASE_URL = `${DOMAIN}?q=${RECIPE}&app_id=${APP_ID}&app_key=${API_KEY}&`
 
 
+// HTML ELEMENTS
 const ul = document.querySelector('ul');
 const foodInput = document.querySelector('input');
 const btn = document.querySelector('button');
@@ -33,30 +35,37 @@ const btn = document.querySelector('button');
 
 
 
-const display = (foodData) => {
-  const list = document.querySelector('food-detail');
-
-  foodData.forEach(() => {
-    const element = document.createElement('div');
-    element.innerHTML =
-      `<h3>Product: ${recipe.dietLabels}</h3>
-      `
-  });
-  list.appendChild(element);
-}
 
 
-// Event Listener Returns Data
 
+
+// EVENT LISTENER (FUNCTION = OK)
 btn.addEventListener('click', async () => {
+  let result = foodInput.value;
   let response = await axios.get(`${BASE_URL}?q=${RECIPE}${APP_ID}${API_KEY}from=0to=3`);
   console.log(response.data.hits);
   const stuff = response.data.hits
-  for (let i = 0; i < stuff.length; i++) {
-    console.log(stuff[i].recipe)
-  }
+  // for (let i = 0; i < stuff.length; i++) {
+  //   console.log(stuff[i].recipe)
+  // }
+  render(stuff)
 });
 
+const render = (stuff) => {
+
+  for (let i = 0; i < stuff.length; i++) {
+    console.log(stuff[i].recipe)
+    console.log(stuff)
+    const list = document.querySelector('.food-detail')
+    const element = document.createElement('div');
+    element.innerHTML =
+      `<h3>Type: ${stuff[0].recipe.dietLabels}</h3>
+        <p> Test: ${ stuff[0].recipe.calories} </p>
+        <p> Test: ${ stuff[0].recipe.calories} </p>
+        <p> Test: ${ stuff[0].recipe.calories} </p>`;
+    list.appendChild(element)
+  }
+}
 
 
 

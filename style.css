@@ -109,5 +109,30 @@ p {
   border: 2px solid black;
   border-radius: 5px;
   
+}
 
+
+/* 
+
+Delete Icon - Code borrowed from: https://stackoverflow.com/questions/2803532/how-do-i-put-a-clear-button-inside-my-html-text-input-box-like-the-iphone-does
+
+*/
+
+
+span.deleteicon {
+  position: relative;
+}
+span.deleteicon span {
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 0px;
+  width: 16px;
+  height: 16px;
+  background: url('http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=4') 0 -690px;
+  cursor: pointer;
+}
+span.deleteicon input {
+  padding-right: 16px;
+  box-sizing: border-box;
 }

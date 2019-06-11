@@ -31,15 +31,15 @@ const ul = document.querySelector('ul');
 const foodInput = document.querySelector('input');
 const btn = document.querySelector('#food-search');
 
-// HTML PAGE TRANSITIONS
-// const page1 = document.querySelector("#page1")
-// const page2 = document.querySelector("#page2")
+//HTML PAGE TRANSITIONS
+const page1 = document.querySelector("#page1")
+const page2 = document.querySelector("#page2")
 
 
 // EVENT LISTENER (FUNCTION = OK)
 btn.addEventListener('click', async () => {
-  // page1.style.display = "none"
-  // page2.style.display = "block"
+  page1.style.display = "none"
+  page2.style.display = "block"
   console.log("click")
   let result = foodInput.value;
   let response = await axios.get(`${BASE_URL}q=${result}`);

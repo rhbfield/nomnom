@@ -17,9 +17,7 @@ body {
 }
 
 html {
-
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 
@@ -27,6 +25,10 @@ h1 {
   font-size: 60px;
   color: #fed330;
   -webkit-text-stroke: 2px black;
+}
+
+a {
+text-decoration: none;
 }
 
 h2 {
@@ -40,10 +42,9 @@ h2.middleClass {
 }
 
 h3{
-
   color: white;
-
 }
+
 p {
   font-size: 24px;
   color: white;
@@ -74,8 +75,11 @@ p {
   display: flex;
   padding-left: 30px;
   align-items: center;
-  flex-wrap: wrap;
-  
+  justify-content: center;
+}
+
+.inputContainer-item-top{
+  align-self: flex-start;
 }
 #page1 {
   height: 100vh;
@@ -83,6 +87,7 @@ p {
   background-color: #ED4742;
   justify-content: center;
  }
+
  #page2 {
   height: 100vh;
   background-color:#ED4742;
@@ -138,6 +143,10 @@ p {
   padding: 20px 20px 20px 30px;
 
 }
+
+#resultsContainer h1 {
+  align-content: center;
+} 
 
 
 /* 
@@ -217,6 +226,35 @@ Modified to match website theme.
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
+
+.food-detail {
+
+  background-color: white;
+  padding: 20px 40px 30px 40px;
+  -webkit-box-shadow: 10px 10px 3px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 3px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 3px 0px rgba(0,0,0,0.75);
+}
+
+.food-detail p{
+  color: #2d3436;
+}
+
+.food-detail button {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 60px;
+  background-attachment: transparent;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #fed330;
+  color: 20bf6b;
+  align-content: right;
+}
+
 /* 
 RECIPE SLIDE-IN PANEL
 Citation: https://codyhouse.co/gem/css-slide-in-panel
@@ -284,4 +322,33 @@ Citation: https://codyhouse.co/gem/css-slide-in-panel
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+
+/* 
+PACE LOADING BAR
+https://github.hubspot.com/pace/
+*/
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
 }

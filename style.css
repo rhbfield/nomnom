@@ -1,7 +1,7 @@
 body {
   margin-right: 20px;
   margin-left: 20px;
-  background: #eb3b5a;  /* fallback for old browsers */
+  background: #ED4742;  /* fallback for old browsers */
 
 }
 
@@ -26,11 +26,13 @@ html {
 h1 {
   font-size: 60px;
   color: #fed330;
+  -webkit-text-stroke: 2px black;
 }
 
 h2 {
   font-size: 30px;
   color: #fed330;
+  -webkit-text-stroke: 1.5px black;
 }
 
 h2.middleClass {
@@ -47,6 +49,7 @@ p {
   color: white;
   margin-bottom: 2em;
 }
+
 
 .header {
   display: flex;
@@ -74,6 +77,17 @@ p {
   flex-wrap: wrap;
   
 }
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+  justify-content: center;
+ }
+ #page2 {
+  height: 100vh;
+  background-color: orange;
+  display: none;
+ }
 
 ::placeholder { /* Firefox, Chrome, Opera */ 
   color: #d1d8e0;
@@ -118,34 +132,155 @@ p {
 #resultsContainer {
 
   display: 100%;
-  border-radius: 25px;
-  border: 2px solid white;
+  /* border-radius: 25px;
+  border: 2px solid white; */
   padding: 20px 20px 20px 30px;
 
 }
 
 
 /* 
-
-Delete Icon - Code borrowed from: https://stackoverflow.com/questions/2803532/how-do-i-put-a-clear-button-inside-my-html-text-input-box-like-the-iphone-does
-
+MODAL
+Citation: https://sabe.io/tutorials/how-to-create-modal-popup-box
+Modified to match website theme. 
 */
 
 
-span.deleteicon {
-  position: relative;
+ /* Create semi-transparent background when modal is active */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
-span.deleteicon span {
+
+.modal h1{
+  font-size: 30px;
+  color:#00b894;
+}
+
+.trigger {
+
+  background-color: transparent;
+  border: transparent;
+  width: 32px;
+  height: 32px; 
+}
+
+.trigger :hover{
+  border:transparent;
+}
+
+.modal p {
+  font-size: 24px;
+  color:#2d3436;
+  margin-bottom: 2em;
+}
+
+
+/* Position the modal in the center of the screen */
+.modal-content {
   position: absolute;
-  display: block;
-  top: 5px;
-  right: 0px;
-  width: 16px;
-  height: 16px;
-  background: url('http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=4') 0 -690px;
-  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
 }
-span.deleteicon input {
-  padding-right: 16px;
-  box-sizing: border-box;
+
+/* Close Button */
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: fff;
+}
+.close-button:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* 
+RECIPE SLIDE-IN PANEL
+Citation: https://codyhouse.co/gem/css-slide-in-panel
+*/
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #fff; /* Black*/
+  border: 2px solid black;;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav h1{
+  margin-left: 30px;
+  -webkit-text-stroke: 2px black;
+}
+
+.sidenav p{
+  color: #2d3436;
+  margin: 0 30px 40px 30px;
+}
+
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

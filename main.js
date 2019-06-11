@@ -29,11 +29,18 @@ const BASE_URL = `${DOMAIN}?app_id=${APP_ID}&app_key=${API_KEY}&`
 // HTML ELEMENTS
 const ul = document.querySelector('ul');
 const foodInput = document.querySelector('input');
-const btn = document.querySelector('button');
+const btn = document.querySelector('#food-search');
+
+// HTML PAGE TRANSITIONS
+// const page1 = document.querySelector("#page1")
+// const page2 = document.querySelector("#page2")
 
 
 // EVENT LISTENER (FUNCTION = OK)
 btn.addEventListener('click', async () => {
+  // page1.style.display = "none"
+  // page2.style.display = "block"
+  console.log("click")
   let result = foodInput.value;
   let response = await axios.get(`${BASE_URL}q=${result}`);
   console.log(response.data.hits);
@@ -45,35 +52,28 @@ let value;
 
 const render = (foodItems) => {
   foodItems.forEach((food) => {
-    // console.log(food.recipe)
-    // console.log(foodItems)
+    console.log(food.recipe)
+    console.log(foodItems)
     const list = document.querySelector('.food-detail')
     const element = document.createElement('div');
     element.innerHTML =
       `<h2>${food.recipe.label}</h2>
       <p>Health Label:${food.recipe.healthLabels}</p>
-      <p>Diet Label: ${food.recipe.dietLabels}</p>
+      <p>Diet:${food.recipe.dietLabels}</p>
       <p>Calories: ${food.recipe.calories} </p>
        `;
     list.appendChild(element)
-  }
-  )
+  })
 }
 
+// HTML PAGE TRANSITIONS EVENT LISTENERS
 
+// page1.addEventListener("click", () => {
+//   page1.style.display = "none"
+//   page2.style.display = "block"
+// })
 
-// console.log(foodItems[i].recipe.calories)
-
-
-// recipes.calories
-//Local Storage
-
-
-//Hidden Div
-
-
-//html create div h1 & h2
-
-//css create different styles for pace 1  & page 2
-
-//On click change to div 2
+// page2.addEventListener("click", () => {
+//   page2.style.display = "none"
+//   page1.style.display = "block"
+// })

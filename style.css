@@ -78,15 +78,17 @@ p {
   justify-content: center;
 }
 
-.inputContainer-item-top{
-  align-self: flex-start;
-}
-#page1 {
+
+.page1 {
   height: 100vh;
   width: 100%;
   background-color: #ED4742;
   justify-content: center;
  }
+
+ .page1-item-top{
+  align-self: flex-start;
+}
 
  #page2 {
   height: 100vh;
@@ -154,7 +156,6 @@ MODAL
 Citation: https://sabe.io/tutorials/how-to-create-modal-popup-box
 Modified to match website theme. 
 */
-
 
  /* Create semi-transparent background when modal is active */
 .modal {
@@ -231,9 +232,9 @@ Modified to match website theme.
 
   background-color: white;
   padding: 20px 40px 30px 40px;
-  -webkit-box-shadow: 10px 10px 3px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 3px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 3px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.38);
+  -moz-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.38);
+  box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.38);
 }
 
 .food-detail p{
@@ -273,8 +274,8 @@ Citation: https://codyhouse.co/gem/css-slide-in-panel
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
 
+}
 .sidenav h1{
   margin-left: 30px;
   -webkit-text-stroke: 2px black;

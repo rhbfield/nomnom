@@ -1,7 +1,7 @@
 body {
   margin-right: 20px;
   margin-left: 20px;
-  background: #ED4742;  /* fallback for old browsers */
+  background:#e74c3c;  /* fallback for old browsers */
 
 }
 
@@ -93,7 +93,7 @@ p {
 
  #page2 {
   height: 100vh;
-  background-color:#ED4742;
+  background-color: #e74c3c;
   display: none;
  }
 
@@ -337,3 +337,28 @@ Citation: https://codyhouse.co/gem/css-slide-in-panel
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+
+/* MEDIA QUERY FOR IPHONE PORTRAIT */
+
+@media only screen 
+  and (max-width: 480px){
+    /* general */
+    p {
+      font-size: 1em;
+    }
+
+    .sidenav p{
+      font-size: 1.2em;
+    }
+    #resultsContainer h1{
+      font-size: 2em;
+    }
+    .sidenav {
+      height: 100%;
+      width: 480;
+      position: fixed;
+      z-index: 1;
+    }
+  }

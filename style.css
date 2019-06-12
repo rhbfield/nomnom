@@ -96,6 +96,18 @@ p {
   display: none;
  }
 
+ .page2 h1{
+
+  align-content: center;
+
+ }
+
+ ul{
+
+  justify-content: space-between;
+
+ }
+ 
 ::placeholder { /* Firefox, Chrome, Opera */ 
   color: #d1d8e0;
 }
@@ -147,7 +159,7 @@ p {
 }
 
 #resultsContainer h1 {
-  align-content: center;
+  justify-content: center;
 } 
 
 

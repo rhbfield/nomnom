@@ -30,7 +30,6 @@ btn.addEventListener('click', async () => {
 });
 
 // FOOOD LIST
-
 const render = (foodItems) => {
   foodItems.forEach((food) => {
     console.log(food.recipe)
@@ -46,7 +45,6 @@ const render = (foodItems) => {
        `;
 
     //OPEN SIDEBAR NAV
-
     const getRecipeBtn = element.querySelector('button');
     getRecipeBtn.addEventListener('click', async (event) => {
       event.preventDefault();
@@ -65,3 +63,13 @@ const render = (foodItems) => {
     list.appendChild(element)
   });
 };
+
+
+//CLOSE SLIDEOUT MENU
+const closeBtn = document.querySelector('.closebtn');
+closeBtn.addEventListener('click', () => {
+  //console.log();
+  const menuEvent = document.querySelector(".sidenav")
+  menuEvent.style.width = "0px";
+})
+

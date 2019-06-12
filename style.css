@@ -22,7 +22,7 @@ html {
 
 
 h1 {
-  font-size: 60px;
+  font-size: 3em;
   color: #fed330;
   -webkit-text-stroke: 2px black;
 }
@@ -32,7 +32,7 @@ text-decoration: none;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 2em;
   color: #fed330;
   -webkit-text-stroke: 1.5px black;
 }
@@ -46,7 +46,7 @@ h3{
 }
 
 p {
-  font-size: 24px;
+  font-size: 2em;
   color: white;
   margin-bottom: 2em;
 }
@@ -79,12 +79,13 @@ p {
 }
 
 
-.page1 {
+/* .page1 {
+  display: flex;
   height: 100vh;
   width: 100%;
   background-color: #ED4742;
   justify-content: center;
- }
+ } */
 
  .page1-item-top{
   align-self: flex-start;
@@ -97,9 +98,7 @@ p {
  }
 
  .page2 h1{
-
   align-content: center;
-
  }
 
  ul{
@@ -113,7 +112,7 @@ p {
 }
 .inputContainer button {
   -webkit-appearance: none;
-  width: 200px;
+  width: 100%;
   height: 60px;
   background-attachment: transparent;
   border: 2px solid black;
@@ -126,7 +125,7 @@ p {
 
 #txtComputer {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   color:#20bf6b;
   margin-top: 10px;
   padding-left: 20px;
@@ -134,19 +133,19 @@ p {
 }
 
 .inputContainer button:hover {
-
   background-color: #20bf6b;
   color: yellow;
 }
 
 .inputContainer input {
 
-  width: 300px;
+  width:94%;
   height:54px;
   background-attachment: transparent;
   border: 2px solid black;
   border-radius: 5px;
-  
+  margin-bottom: 20px;
+
 }
 
 #resultsContainer {
@@ -159,7 +158,8 @@ p {
 }
 
 #resultsContainer h1 {
-  justify-content: center;
+  text-align: center;
+  font-size: 3em;
 } 
 
 
@@ -184,7 +184,7 @@ Modified to match website theme.
 }
 
 .modal h1{
-  font-size: 30px;
+  font-size: 3em;
   color:#00b894;
 }
 
@@ -201,7 +201,7 @@ Modified to match website theme.
 }
 
 .modal p {
-  font-size: 24px;
+  font-size: 1.4em;
   color:#2d3436;
   margin-bottom: 2em;
 }
@@ -243,7 +243,7 @@ Modified to match website theme.
 .food-detail {
 
   background-color: white;
-  padding: 20px 40px 30px 40px;
+  padding: 20px 0px 30px 0px;
   -webkit-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.38);
   -moz-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.38);
   box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.38);
@@ -251,6 +251,7 @@ Modified to match website theme.
 
 .food-detail p{
   color: #2d3436;
+  padding-right: 30px;
 }
 
 .food-detail button {
@@ -262,7 +263,7 @@ Modified to match website theme.
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1.2em;
   background-color: #fed330;
   color: 20bf6b;
   align-content: right;
@@ -303,7 +304,7 @@ Citation: https://codyhouse.co/gem/css-slide-in-panel
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 5em;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -335,33 +336,4 @@ Citation: https://codyhouse.co/gem/css-slide-in-panel
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
-
-
-/* 
-PACE LOADING BAR
-https://github.hubspot.com/pace/
-*/
-
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.pace-inactive {
-  display: none;
-}
-
-.pace .pace-progress {
-  background: #29d;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 2px;
 }

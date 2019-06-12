@@ -58,7 +58,6 @@ const render = (foodItems) => {
           `;
       })
       nutritionElement.style.width = "500px";
-      getRecipeBtn.style.display = 'none';
     });
     list.appendChild(element)
   });

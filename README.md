@@ -22,6 +22,7 @@ Using nomnom is easy. Just enter a food you'd like to eat and you'll get back a 
 
 
 <h2>Technologies/Languages Used:</h2>
+
 * HTML
 * CSS
 * Javascript

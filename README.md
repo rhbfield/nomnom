@@ -1,8 +1,8 @@
-#nom.
+<h1>nom.</h1>
 Get detailed food nutrition data using a RESTful API to GET data with nom..
 
 
-##How to use nom.
+<h2>How to use nom.</h2>
 
 Using nomnom is easy. Just enter a food you'd like to eat and you'll get back a list of foods including diet types.
 
@@ -17,11 +17,11 @@ Using nomnom is easy. Just enter a food you'd like to eat and you'll get back a 
 
 
 
-Use nom live at https://nomnom.surge.sh
+<h2>Use nom live at https://nomnom.surge.sh</h2>
 
 
 
-##Technologies/Languages Used:
+<h2>Technologies/Languages Used:</h2>
 * HTML
 * CSS
 * Javascript
